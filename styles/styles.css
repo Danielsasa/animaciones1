@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*transform*/
+main, section .transform {
+padding: 1rem;
+}
+main{
+    background-color: red;
+    height: 100vh;
+}
+section{
+    background-color: rgb(255, 77, 77);
+    height: 400px;
+}
+
+
+
+/*.transform{
+    transform:translate(0px, 300px) rotate(0deg) scale(.5) skew(10deg, 20deg);
+}*/
+
+/*transisicones*/
+
+/*.transform:hover{
+    background-color: aqua;
+    transform: translate(100px,0) rotate(1turn);
+    border-radius: 100px;
+}*/
+
+/*animaciones*/
+.transform{
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 100px;
+    /*transition: all .5s ease-in-out;*/
+    animation: movimiento 2s ease-in 0s infinite alternate running;
+}
+
+.transform:hover {
+    animation-play-state: paused;
+}
+
+@keyframes movimiento {
+    from {
+        transform: translate(0);
+
+    }
+    33%{
+        transform: translate(100px,0);
+        background-color: aqua;
+    }
+
+    66%{
+        transform: translate(100px, 100px);
+        background-color: yellow;
+    }
+
+    to{
+        transform: translate(0 , 100px);
+        background-color: cyan;
+
+    }
+}
